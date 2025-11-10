@@ -21,7 +21,7 @@ const getLocationName = () => {
       <el-header
         class="bg-white flex z-50 items-center fixed top-0 left-0 w-full border-b border-b-gray-300"
       >
-        <el-image src="/logo.svg" class="h-2/4 w-auto mr-3" />
+        <el-image src="logo.svg" class="h-2/4 w-auto mr-3" />
         <h1
           :class="{
             'cursor-pointer': route.params.location,
