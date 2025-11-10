@@ -138,6 +138,7 @@ import axios from 'axios'
 import { useRoute } from 'vue-router'
 import partners from '@/data/partners.json'
 import { InfoFilled } from '@element-plus/icons-vue'
+import type { ElInput } from 'element-plus'
 
 const route = useRoute()
 
@@ -199,7 +200,7 @@ const copyText = computed(() => {
   return reportLines.join('\n')
 })
 
-const textareaRef = ref<HTMLInputElement | null>(null)
+const textareaRef = ref<InstanceType<typeof ElInput> | null>(null)
 
 watch(successDialogVisible, async (visible) => {
   if (visible) {
