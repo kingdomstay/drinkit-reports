@@ -12,6 +12,7 @@ import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/drinkit-reports/',
   plugins: [
     vue(),
     vueDevTools(),
