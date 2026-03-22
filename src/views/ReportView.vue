@@ -1,4 +1,8 @@
 <template>
+  <el-alert
+    type="primary"
+    title="Drinkit обновил API. Заметили ошибки в данных? Контакт для связи ниже"
+  />
   <el-collapse v-model="activeNames">
     <el-collapse-item
       :disabled="!loaded"
@@ -250,7 +254,7 @@ onMounted(async () => {
       : null
 
     const resMotivation = await axios.get(
-      `https://drinkit-mobile-api.drinkit.dodois.io/motivation/v2/GetMotivationBoard?countryId=643&unitId=${location.uuid}`,
+      `https://dodo-proxy.kirill-troitskij.workers.dev/api/v1/boards?countryId=643&unitId=${location.uuid}`,
     )
     const motivationData = resMotivation.data
     form.likes = motivationData.orderRatingCounter.likeCount ?? null
