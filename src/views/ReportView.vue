@@ -254,7 +254,7 @@ onMounted(async () => {
       : null
 
     const resMotivation = await axios.get(
-      `https://functions.yandexcloud.net/d4em5sha6vnm0tiacat1?path=/api/v1/boards?countryId=643&unitId=${location.uuid}`,
+      `https://functions.yandexcloud.net/d4em5sha6vnm0tiacat1?path=/api/v1/boards&countryId=643&unitId=${location.uuid}`,
     )
     const motivationData = resMotivation.data
     form.likes = motivationData.orderRatingCounter.likeCount ?? null
